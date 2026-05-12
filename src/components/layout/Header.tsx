@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Search, Bell } from "lucide-react"
+import { Bell } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const NAV_ITEMS = [
@@ -51,24 +51,20 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-3 shrink-0">
-          <button
-            aria-label="Search"
-            className="w-8 h-8 flex items-center justify-center rounded-full text-ink-3 hover:text-ink hover:bg-subtle transition-colors"
-          >
-            <Search size={16} />
-          </button>
-          <button
+          <Link
+            href="/settings?tab=notifications"
             aria-label="Notifications"
             className="w-8 h-8 flex items-center justify-center rounded-full text-ink-3 hover:text-ink hover:bg-subtle transition-colors"
           >
             <Bell size={16} />
-          </button>
-          <button
-            aria-label="Account"
-            className="w-8 h-8 rounded-full bg-ink/10 flex items-center justify-center text-[12px] font-medium text-ink"
+          </Link>
+          <Link
+            href="/settings"
+            aria-label="Account settings"
+            className="w-8 h-8 rounded-full bg-ink/10 flex items-center justify-center text-[12px] font-medium text-ink hover:bg-ink/15 transition-colors"
           >
             A
-          </button>
+          </Link>
         </div>
       </div>
     </header>

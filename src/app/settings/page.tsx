@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import { motion } from "framer-motion"
 import { User, Smartphone, Bell, ChevronRight, Check } from "lucide-react"
 import { Header } from "@/components/layout/Header"
@@ -147,7 +148,15 @@ const TAB_CONTENT: Record<TabKey, React.ReactNode> = {
 }
 
 export default function SettingsPage() {
+  const searchParams = useSearchParams()
   const [tab, setTab] = useState<TabKey>("account")
+
+  useEffect(() => {
+    const t = searchParams.get("tab")
+    if (t === "notifications" || t === "devices" || t === "account") {
+      setTab(t)
+    }
+  }, [searchParams])
 
   return (
     <div className="min-h-screen bg-canvas">
