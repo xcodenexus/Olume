@@ -57,8 +57,8 @@ function AccountTab() {
     <div className="flex flex-col gap-6">
       <div className="bg-card rounded-card border border-ink/[0.06] p-5">
         <p className="text-[11px] uppercase tracking-widest text-ink-3 font-medium mb-1">Profile</p>
-        <SettingRow label="Name" value="Alex" chevron />
-        <SettingRow label="Email" value="alex@example.com" chevron />
+        <SettingRow label="Name" value="John" chevron />
+        <SettingRow label="Email" value="john@example.com" chevron />
         <SettingRow label="Subscription" value="Olume Pro" chevron />
         <SettingRow label="Member since" value="January 2026" />
       </div>

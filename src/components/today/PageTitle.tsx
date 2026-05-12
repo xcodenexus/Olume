@@ -4,7 +4,7 @@ interface PageTitleProps {
   name?: string
 }
 
-export function PageTitle({ name = "Alex" }: PageTitleProps) {
+export function PageTitle({ name = "John" }: PageTitleProps) {
   const now = new Date()
   const hour = now.getHours()
   const greeting =

@@ -63,7 +63,7 @@ export function Header() {
             aria-label="Account settings"
             className="w-8 h-8 rounded-full bg-ink/10 flex items-center justify-center text-[12px] font-medium text-ink hover:bg-ink/15 transition-colors"
           >
-            A
+            J
           </Link>
         </div>
       </div>
