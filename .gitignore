@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project spec & AI agent files
+Olume.md
+CLAUDE.md
+AGENTS.md
+.playwright-mcp/
+pnpm-workspace.yaml
