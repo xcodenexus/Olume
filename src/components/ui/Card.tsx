@@ -1,4 +1,19 @@
+"use client"
+
+import { motion, type Transition, type Variants } from "framer-motion"
 import { cn } from "@/lib/utils"
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
+
+const CARD_HOVER = {
+  y: -2,
+  boxShadow: "0 8px 30px rgba(26, 24, 20, 0.07)",
+}
+
+const CARD_TRANSITION: Transition = {
+  duration: 0.22,
+  ease: EASE,
+}
 
 interface CardProps {
   className?: string
@@ -7,14 +22,16 @@ interface CardProps {
 
 export function Card({ className, children }: CardProps) {
   return (
-    <div
+    <motion.div
       className={cn(
         "bg-card rounded-card border border-ink/[0.06] p-5 flex flex-col",
         className
       )}
+      whileHover={CARD_HOVER}
+      transition={CARD_TRANSITION}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
@@ -55,4 +72,25 @@ export function CardSubtext({ children, className }: CardSubtextProps) {
       {children}
     </p>
   )
+}
+
+export const cardGridVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.04,
+    },
+  },
+}
+
+export const cardItemVariants: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: EASE,
+    },
+  },
 }
