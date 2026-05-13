@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { motion } from "framer-motion"
 import { User, Smartphone, Bell, ChevronRight, Check } from "lucide-react"
@@ -147,7 +147,7 @@ const TAB_CONTENT: Record<TabKey, React.ReactNode> = {
   notifications: <NotificationsTab />,
 }
 
-export default function SettingsPage() {
+function SettingsContent() {
   const searchParams = useSearchParams()
   const [tab, setTab] = useState<TabKey>("account")
 
@@ -208,5 +208,13 @@ export default function SettingsPage() {
         </motion.div>
       </main>
     </div>
+  )
+}
+
+export default function SettingsPage() {
+  return (
+    <Suspense>
+      <SettingsContent />
+    </Suspense>
   )
 }
