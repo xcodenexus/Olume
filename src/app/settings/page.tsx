@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react"
+import { useState, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { motion } from "framer-motion"
 import { User, Smartphone, Bell, ChevronRight, Check } from "lucide-react"
@@ -149,14 +149,12 @@ const TAB_CONTENT: Record<TabKey, React.ReactNode> = {
 
 function SettingsContent() {
   const searchParams = useSearchParams()
-  const [tab, setTab] = useState<TabKey>("account")
-
-  useEffect(() => {
-    const t = searchParams.get("tab")
-    if (t === "notifications" || t === "devices" || t === "account") {
-      setTab(t)
-    }
-  }, [searchParams])
+  const tabParam = searchParams.get("tab")
+  const [tab, setTab] = useState<TabKey>(
+    tabParam === "notifications" || tabParam === "devices" || tabParam === "account"
+      ? tabParam
+      : "account"
+  )
 
   return (
     <div className="min-h-screen bg-canvas">
