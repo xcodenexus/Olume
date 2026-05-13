@@ -4,6 +4,7 @@ import {
   BarChart,
   Bar,
   XAxis,
+  YAxis,
   Tooltip,
   ResponsiveContainer,
   Cell,
@@ -24,9 +25,10 @@ export function SessionsCard() {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={sessionsData}
-            margin={{ top: 0, right: 4, left: -10, bottom: 0 }}
+            margin={{ top: 0, right: 4, left: 4, bottom: 0 }}
             barSize={10}
           >
+            <YAxis hide width={0} />
             <XAxis
               dataKey="day"
               tick={{ fontSize: 10, fill: "#9B948A", fontFamily: "var(--font-geist-mono)" }}
