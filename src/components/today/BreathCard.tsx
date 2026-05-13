@@ -21,8 +21,8 @@ export function BreathCard() {
   return (
     <Card className="items-center gap-1">
       <CardLabel>Breath Coherence</CardLabel>
-      <div className="mt-3 relative w-[200px] h-[120px]">
-        <svg viewBox="0 0 200 120" className="w-full h-full overflow-visible">
+      <div className="mt-3 w-full max-w-[200px] mx-auto">
+        <svg viewBox="0 0 200 120" className="w-full h-auto overflow-visible">
           <path
             d={describeArc(CX, CY, RADIUS)}
             fill="none"

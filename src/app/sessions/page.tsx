@@ -32,7 +32,7 @@ export default function SessionsPage() {
     <div className="min-h-screen bg-canvas">
       <Header />
 
-      <main className="max-w-screen-xl mx-auto px-6 pt-8 pb-12">
+      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 pt-8 pb-24 md:pb-12">
         {/* Page header */}
         <motion.div
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8"

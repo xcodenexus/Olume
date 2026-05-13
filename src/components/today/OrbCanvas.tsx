@@ -19,7 +19,7 @@ export function OrbCanvas({ state }: OrbCanvasProps) {
   const c = STATE_ORB_COLORS[state]
 
   return (
-    <div className="relative w-[280px] h-[280px] flex items-center justify-center">
+    <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] flex items-center justify-center">
       {/* Outer ambient glow */}
       <div
         className="absolute inset-[-20px] rounded-full pointer-events-none"
@@ -31,7 +31,7 @@ export function OrbCanvas({ state }: OrbCanvasProps) {
 
       {/* Sphere */}
       <div
-        className="relative w-[240px] h-[240px] rounded-full"
+        className="relative w-[168px] h-[168px] sm:w-[240px] sm:h-[240px] rounded-full"
         style={{
           background: `radial-gradient(ellipse at 38% 32%, ${c.highlight} 0%, ${c.main} 48%, ${c.shadow} 100%)`,
           boxShadow: `0 8px 40px ${c.main}50, 0 0 80px ${c.glow}30, inset 0 -8px 24px ${c.shadow}40`,

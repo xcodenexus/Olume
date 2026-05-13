@@ -23,7 +23,7 @@ export default function InsightsPage() {
     <div className="min-h-screen bg-canvas">
       <Header />
 
-      <main className="max-w-screen-xl mx-auto px-6 pt-8 pb-12">
+      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 pt-8 pb-24 md:pb-12">
         {/* Page header */}
         <motion.div
           className="mb-8"
@@ -51,7 +51,7 @@ export default function InsightsPage() {
                 <p className="text-[13px] text-ink-2 mt-0.5">{weekLabel}</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <p className="text-[11px] text-ink-3 uppercase tracking-widest">Sessions</p>
                   <p className="font-mono text-[28px] text-ink leading-none mt-1">

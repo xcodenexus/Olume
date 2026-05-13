@@ -14,10 +14,10 @@ export default function JournalPage() {
     <div className="min-h-screen bg-canvas">
       <Header />
 
-      <main className="max-w-screen-lg mx-auto px-6 pt-8 pb-12">
+      <main className="max-w-screen-lg mx-auto px-4 sm:px-6 pt-8 pb-24 md:pb-12">
         {/* Page header */}
         <motion.div
-          className="flex items-end justify-between mb-8"
+          className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-8"
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: EASE_CALM }}

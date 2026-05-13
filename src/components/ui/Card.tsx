@@ -24,7 +24,7 @@ export function Card({ className, children }: CardProps) {
   return (
     <motion.div
       className={cn(
-        "bg-card rounded-card border border-ink/[0.06] p-5 flex flex-col",
+        "bg-card rounded-card border border-ink/[0.06] p-3 sm:p-5 flex flex-col",
         className
       )}
       whileHover={CARD_HOVER}

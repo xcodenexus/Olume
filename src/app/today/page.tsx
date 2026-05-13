@@ -19,7 +19,7 @@ export default function TodayPage() {
     <div className="min-h-screen bg-canvas">
       <Header />
 
-      <main className="max-w-screen-xl mx-auto px-6 pt-8 pb-12">
+      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 pt-8 pb-24 md:pb-12">
         {/* Page title zone */}
         <motion.div
           initial={{ opacity: 0, y: 6 }}
@@ -59,7 +59,7 @@ export default function TodayPage() {
             </div>
 
             {/* Row 2 */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
               <motion.div variants={cardItemVariants}>
                 <BreathCard />
               </motion.div>

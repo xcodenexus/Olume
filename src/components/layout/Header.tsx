@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Bell } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { MobileNav } from "./MobileNav"
 
 const NAV_ITEMS = [
   { label: "Today", href: "/today" },
@@ -16,6 +17,7 @@ export function Header() {
   const pathname = usePathname()
 
   return (
+    <>
     <header className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-ink/[0.06]">
       <div className="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
         {/* Logo */}
@@ -26,8 +28,8 @@ export function Header() {
           Olume
         </Link>
 
-        {/* Pill nav */}
-        <nav className="flex items-center gap-1 bg-subtle rounded-pill p-1">
+        {/* Pill nav — desktop only */}
+        <nav className="hidden md:flex items-center gap-1 bg-subtle rounded-pill p-1">
           {NAV_ITEMS.map((item) => {
             const active =
               pathname === item.href ||
@@ -68,5 +70,7 @@ export function Header() {
         </div>
       </div>
     </header>
+    <MobileNav />
+    </>
   )
 }

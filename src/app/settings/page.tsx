@@ -162,7 +162,7 @@ export default function SettingsPage() {
     <div className="min-h-screen bg-canvas">
       <Header />
 
-      <main className="max-w-screen-md mx-auto px-6 pt-8 pb-12">
+      <main className="max-w-screen-md mx-auto px-4 sm:px-6 pt-8 pb-24 md:pb-12">
         <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: 6 }}
@@ -173,7 +173,7 @@ export default function SettingsPage() {
         </motion.div>
 
         <motion.div
-          className="flex items-center gap-1 mb-6 bg-subtle p-1 rounded-pill w-fit"
+          className="flex items-center gap-1 mb-6 bg-subtle p-1 rounded-pill w-full sm:w-fit overflow-x-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.08, ease: EASE_CALM }}
