@@ -24,7 +24,7 @@ export function SessionsCard() {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={sessionsData}
-            margin={{ top: 0, right: 4, left: -20, bottom: 0 }}
+            margin={{ top: 0, right: 4, left: -10, bottom: 0 }}
             barSize={10}
           >
             <XAxis

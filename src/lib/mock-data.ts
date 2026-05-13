@@ -12,12 +12,12 @@ export const moodAverage = 7.4
 
 export const sessionsData = [
   { day: "Mon", minutes: 20 },
-  { day: "Tue", minutes: 0 },
+  { day: "Tue", minutes: 18 },
   { day: "Wed", minutes: 15 },
   { day: "Thu", minutes: 25 },
   { day: "Fri", minutes: 30 },
   { day: "Sat", minutes: 22 },
-  { day: "Sun", minutes: 30 },
+  { day: "Sun", minutes: 12 },
 ]
 
 export const weeklySessionMinutes = 142
